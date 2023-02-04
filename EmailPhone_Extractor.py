@@ -1,5 +1,7 @@
 import pyperclip, re
 
+
+#Use thic clipboard text for testing our code
 message = '''
 Skip to main content
 
@@ -78,23 +80,18 @@ Fax: +1 415.863.9950
 Reach Us on Social Media
 Twitter Facebook Instagram Linkedin Pinterest
 
- 
- 
-
 Navigation
 My account
 Want sweet deals?
 Sign up for our newsletter.
 
-
 About Us  |  Jobs!  |  Sales and Distribution  |  Rights  |  Media  |  Academic Requests  |  Conferences  |  FAQ  |  Contact Us  |  Write for Us  |  Privacy
 Copyright 2023. No Starch Press, Inc
 
-
-
-
 '''
 
+
+#This module copy text from the clipboard 
 pyperclip.copy(message)
 
 
@@ -118,7 +115,7 @@ emailRegex = re.compile(r'''(
     )''', re.VERBOSE)
 
 
-#find matches in clipboard text
+#find all matches in the clipboard text
 text = str(pyperclip.paste())
 
 
